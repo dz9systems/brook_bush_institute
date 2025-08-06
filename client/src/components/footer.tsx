@@ -1,14 +1,14 @@
 import { Button } from "@/components/ui/button";
 import { Mail } from "lucide-react";
-import { 
-  SiGoogle, 
-  SiApple, 
-  SiFacebook, 
-  SiInstagram, 
-  SiX, 
-  SiLinkedin, 
-  SiYoutube, 
-  SiTiktok 
+import {
+  SiGoogle,
+  SiApple,
+  SiFacebook,
+  SiInstagram,
+  SiX,
+  SiLinkedin,
+  SiYoutube,
+  SiTiktok
 } from "react-icons/si";
 
 export function Footer() {
@@ -104,7 +104,7 @@ export function Footer() {
           <div>
             <h4 className="font-semibold text-gray-900 mb-4">Are you looking for additional help?</h4>
             <p className="text-sm text-gray-600 mb-4">Our team is here to help you find the right answer for your question.</p>
-            <Button className="bg-blue-600 hover:bg-blue-700 text-sm">
+            <Button className="bg-blue-500 hover:bg-blue-600 text-sm rounded-full px-6 py-2">
               Contact Support
             </Button>
           </div>

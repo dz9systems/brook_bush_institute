@@ -117,6 +117,7 @@ export default function VerificationPage() {
               <h1 className="text-3xl font-bold text-gray-900 mb-4">Trainer Certification Verification</h1>
               <p className="text-lg text-gray-600">Verify the credentials of certified personal trainers and movement specialists</p>
             </div>
+
             <div className="max-w-2xl mx-auto">
               <div className="bg-gray-50 rounded-lg p-6 mb-6">
                 <h2 className="text-xl font-semibold text-gray-900 mb-4">Search Options</h2>
@@ -139,7 +140,7 @@ export default function VerificationPage() {
                     <Button
                       onClick={handleSearchByName}
                       disabled={isSearching}
-                      className="bg-blue-600 hover:bg-blue-700 w-full sm:w-auto"
+                      className="bg-blue-600 hover:bg-blue-700 w-full sm:w-auto justify-center sm:justify-start"
                     >
                       {isSearching ? (
                         <RefreshCw className="w-4 h-4 mr-2 animate-spin" />
@@ -176,7 +177,7 @@ export default function VerificationPage() {
                     <Button
                       onClick={handleSearchByNumber}
                       disabled={isSearching}
-                      className="bg-blue-600 hover:bg-blue-700 w-full sm:w-auto"
+                      className="bg-blue-600 hover:bg-blue-700 w-full sm:w-auto justify-center sm:justify-start"
                     >
                       {isSearching ? (
                         <RefreshCw className="w-4 h-4 mr-2 animate-spin" />
@@ -281,7 +282,6 @@ export default function VerificationPage() {
                   <div className="flex items-center mb-3">
                     <Clock className="w-5 h-5 text-gray-600 mr-3" />
                     <h3 className="text-lg font-semibold text-gray-900">Real-Time Verification</h3>
-
                   </div>
                   <p className="text-sm text-gray-700">Get instant verification results with up-to-date certification status information.</p>
                 </div>
