@@ -1,4 +1,4 @@
-import logoPath from "@assets/logo_1754440730074.png";
+import logoPath from "/logo.png";
 
 interface BrookbushLogoProps {
   className?: string;
@@ -7,9 +7,9 @@ interface BrookbushLogoProps {
 export function BrookbushLogo({ className = "" }: BrookbushLogoProps) {
   return (
     <div className={`flex items-center ${className}`}>
-      <img 
-        src={logoPath} 
-        alt="Brookbush Institute - Human Movement Science" 
+      <img
+        src={logoPath}
+        alt="Brookbush Institute - Human Movement Science"
         className="h-10 w-auto"
       />
     </div>
