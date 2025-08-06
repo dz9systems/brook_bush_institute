@@ -34,7 +34,7 @@ export default function VerificationPage() {
     // Simulate API delay for realistic experience
     setTimeout(() => {
       const results = searchTrainerByName(searchName);
-      
+
       if (results.length > 0) {
         setSearchResults(results);
         setShowNoResults(false);
@@ -68,7 +68,7 @@ export default function VerificationPage() {
     // Simulate API delay for realistic experience
     setTimeout(() => {
       const result = searchTrainerByCertificationId(searchNumber);
-      
+
       if (result) {
         setSearchResults([result]);
         setShowNoResults(false);
@@ -106,7 +106,7 @@ export default function VerificationPage() {
   return (
     <div className="min-h-screen bg-gray-50">
       <Header />
-      
+
       <main className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <Card className="bg-white rounded-xl shadow-lg p-8 mb-8">
           <CardContent className="p-0">
@@ -121,13 +121,13 @@ export default function VerificationPage() {
             <div className="max-w-2xl mx-auto">
               <div className="bg-gray-50 rounded-lg p-6 mb-6">
                 <h2 className="text-xl font-semibold text-gray-900 mb-4">Search Options</h2>
-                
+
                 {/* Search by Name */}
                 <div className="mb-6">
                   <Label htmlFor="searchName" className="block text-sm font-medium text-gray-700 mb-2">
                     Search by Trainer Name
                   </Label>
-                  <div className="flex space-x-3">
+                  <div className="flex flex-col sm:flex-row space-y-3 sm:space-y-0 sm:space-x-3">
                     <Input
                       id="searchName"
                       type="text"
@@ -137,10 +137,10 @@ export default function VerificationPage() {
                       onKeyPress={(e) => e.key === "Enter" && handleSearchByName()}
                       className="flex-1"
                     />
-                    <Button 
+                    <Button
                       onClick={handleSearchByName}
                       disabled={isSearching}
-                      className="bg-blue-600 hover:bg-blue-700"
+                      className="bg-blue-600 hover:bg-blue-700 w-full sm:w-auto"
                     >
                       {isSearching ? (
                         <RefreshCw className="w-4 h-4 mr-2 animate-spin" />
@@ -164,7 +164,7 @@ export default function VerificationPage() {
                   <Label htmlFor="searchNumber" className="block text-sm font-medium text-gray-700 mb-2">
                     Search by Certification Number
                   </Label>
-                  <div className="flex space-x-3">
+                  <div className="flex flex-col sm:flex-row space-y-3 sm:space-y-0 sm:space-x-3">
                     <Input
                       id="searchNumber"
                       type="text"
@@ -174,10 +174,10 @@ export default function VerificationPage() {
                       onKeyPress={(e) => e.key === "Enter" && handleSearchByNumber()}
                       className="flex-1"
                     />
-                    <Button 
+                    <Button
                       onClick={handleSearchByNumber}
                       disabled={isSearching}
-                      className="bg-blue-500 hover:bg-blue-600"
+                      className="bg-blue-600 hover:bg-blue-700 w-full sm:w-auto"
                     >
                       {isSearching ? (
                         <RefreshCw className="w-4 h-4 mr-2 animate-spin" />
@@ -205,7 +205,7 @@ export default function VerificationPage() {
                           </p>
                         </div>
                       )}
-                      
+
                       {searchResults.map((trainer, index) => (
                         <div key={trainer.certificationId} className="bg-green-50 border border-green-200 rounded-lg p-6">
                           <div className="flex items-start space-x-4">
@@ -290,7 +290,7 @@ export default function VerificationPage() {
           </CardContent>
         </Card>
       </main>
-      
+
       <Footer />
     </div>
   );
